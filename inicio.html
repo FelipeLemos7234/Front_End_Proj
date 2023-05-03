@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="script.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Cadastrar usuario -->
+    <!-- Nome, Email, Idade, Saldo -->
+    <!-- Buscar usuario -->
+    <!-- Deletar usuario -->
+
+    <header>
+        <a class="logo">Base de Usuarios</a>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="clicarCadastroHeader()" class="anchor_header">Cadastrar</a></li>
+            <li><a href="javascript:void(0)" onclick="clicarBuscarHeader()" class="anchor_header">Buscar</a></li>
+            <li><a href="javascript:void(0)" onclick="clicarRemoverHeader()" class="anchor_header">Remover</a></li>
+            <li><a href="javascript:void(0)" onclick="clicarVisualizar()" class="anchor_header">Visualizar</a></li>
+        </ul>
+    </header>
+
+    <div class="main-body">
+        <section id="sessao1" class="secaoCadastro" style="visibility: hidden;">
+
+            <h1 class="formHeader">Cadastro de Usuários</h1>
+
+            <form class="formCadastro">
+                <p>
+                    <label for="Nome">Nome</label>
+                    <input class="inputCadastro" type="text" name="Nome" id="Nome">
+                </p>
+                <p>
+                    <label for="Email">Email</label>
+                    <input class="inputCadastro" type="email" name="Email" id="Email">
+                </p>
+                <p>
+                    <label for="Idade">Idade</label>
+                    <input class="inputCadastro" type="number" name="Idade" id="Idade" min="18" max="150" step="1">
+                </p>
+                <p>
+                    <label for="Saldo">Saldo</label>
+                    <input class="inputCadastro" type="number" name="Saldo" id="Saldo" step="0.01">
+                </p>
+            </form>
+
+            <button class="cadastrarBtn" onclick="clicarCadastrar()">Cadastrar</button>
+
+        </section>
+        
+        <section id="sessao2" class="secaoBusca" style="visibility: hidden;">
+
+            <h1 class="formHeader">Busca de Usuários</h1>
+
+            <form class="formBusca">
+                <p>
+                    <label for="idUsuario">ID do Usuario</label>
+                    <input class="inputBusca" type="number" id="idUsuario" name="idUsuario">
+                </p>
+            </form>
+
+            <button class="buscarBtn" onclick="clicarBuscar()">Buscar</button>
+
+        </section>
+
+        <section id="sessao3" class="secaoRemover" style="visibility: hidden;">
+
+            <h1 class="formHeader">Remoção de Usuários</h1>
+
+            <form class="formRemover">
+                <p>
+                    <label >Remover Usuario</label>
+                    <input class="inputRemover" type="number" name="remover" id="removerInput" step="1">
+                </p>
+            </form>
+
+            <button class="removerBtn" onclick="clicarDeletar()">Remover</button>
+
+        </section>
+
+        <section id = "sessao4" class="secaoTabela" style="visibility: hidden;":>
+            <table id="tabelaUsuarios" class="tabela-usuarios">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Idade</th>
+                        <th>Saldo</th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+
+    </div>
+
+
+    <script src="script.js" ></script>
+</body>
+</html>
